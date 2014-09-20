@@ -5,11 +5,10 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 Gem::Specification.new do |spec|
   spec.name          = "db_supplier"
   spec.version       = '0.0.1'
-  spec.authors       = ["Ryoichi SEKIGUCHI"]
+  spec.authors       = ["ryopeko"]
   spec.email         = ["ryopeko@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Migration tool from external database's DDL}
+  spec.homepage      = "https://github.com/ryopeko/db_supplier"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
