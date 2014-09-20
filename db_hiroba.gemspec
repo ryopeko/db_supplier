@@ -17,8 +17,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "activerecord", ">= 4.0.0"
-  spec.add_dependency "activesupport", ">= 4.0.0"
+  spec.add_dependency "rails", ">= 4.0.0"
   spec.add_dependency "octokit", "3.3.0"
 
   spec.add_development_dependency "bundler", "~> 1.7"
