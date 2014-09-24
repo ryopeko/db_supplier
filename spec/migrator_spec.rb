@@ -30,7 +30,7 @@ describe DBSupplier::Migrator do
       it { expect(migrate_class.databases).to be_empty }
     end
 
-    context "when schema_files is not present" do
+    context "when schema_files is present" do
       let (:database_name) { :foo }
       let (:databases) { { database_name => 'bar' } }
       let (:set_databases) {
