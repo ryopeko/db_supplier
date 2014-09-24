@@ -1,3 +1,4 @@
+require 'rspec/mocks/standalone'
 require 'simplecov'
 require 'tapp'
 
