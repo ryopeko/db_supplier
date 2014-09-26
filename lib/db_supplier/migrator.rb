@@ -57,10 +57,10 @@ module DBSupplier
       end
 
       def fetch_sql(db_name)
-        migration_file_paths = Array(@schema_files.fetch(db_name.to_sym))
+        migration_file_paths = @schema_files.try(:fetch, db_name.to_sym) || (raise RuntimeError, "undefined #{db_name} schemat")
         repository = @schema_repository || (raise RuntimeError, 'undefined schema repository')
 
-        migration_file_paths.map do |path|
+        Array(migration_file_paths).map do |path|
           client.contents(
             repository,
             path: path,
