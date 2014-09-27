@@ -1,4 +1,6 @@
 # DBSupplier
+[![Build Status](https://travis-ci.org/ryopeko/db_supplier.svg?branch=master)](https://travis-ci.org/ryopeko/db_supplier)
+
 Migration tool from external database's DDL.
 Fetch sql from GitHub repository and migrate local database.
 
