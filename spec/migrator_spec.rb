@@ -117,8 +117,6 @@ describe DBSupplier::Migrator do
         FileUtils.rm @db_name
       end
 
-
-
       it { expect(ActiveRecord::Base.connection.tables).to include(@table_name) }
     end
   end
