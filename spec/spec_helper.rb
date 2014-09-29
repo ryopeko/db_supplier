@@ -2,6 +2,9 @@ require 'rspec/mocks/standalone'
 require 'simplecov'
 require 'tapp'
 
+require 'coveralls'
+Coveralls.wear!
+
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
   SimpleCov::Formatter::HTMLFormatter
 ]
