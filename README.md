@@ -4,6 +4,8 @@
 Migration tool from external database's DDL.
 Fetch sql from GitHub repository and migrate local database.
 
+![demo](https://cloud.githubusercontent.com/assets/192008/4487362/3443a748-49fa-11e4-87ef-88661b00fcc5.gif)
+
 ## Installation
 
 Add this line to your application's Gemfile:
