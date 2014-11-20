@@ -14,6 +14,7 @@ module DBSupplier
         @configurations = config
 
         @schema_repository = config[:schema_repository]
+        @schema_ref        = config[:schema_ref] || 'master'
         @schema_files      = config[:schema_files].symbolize_keys
         @access_token      = config[:access_token]
 
@@ -63,6 +64,7 @@ module DBSupplier
         Array(migration_file_paths).map do |path|
           client.contents(
             repository,
+            ref: @schema_ref,
             path: path,
             headers: {
               accept: 'application/vnd.github.VERSION.raw'
