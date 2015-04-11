@@ -78,7 +78,9 @@ describe DBSupplier::Migrator do
         }
       }
 
-      allow_any_instance_of(Octokit::Client).to receive(:contents).and_return('sql')
+      before do
+        allow_any_instance_of(Octokit::Client).to receive(:contents).and_return('sql')
+      end
 
       it { expect(set_all_args.fetch_sql(db_name)).to eq ['sql'] }
     end
